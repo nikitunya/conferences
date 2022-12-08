@@ -10,6 +10,25 @@ use Session;
 
 class CustomAuthController extends Controller
 {
+    public function index(){
+        return view('auth.login');
+    }
+
+    public function custom_login(Request $request){
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required'
+        ]);
+
+        $credential = $request->only('email', 'password');
+
+        if (Auth::attempt($credential)){
+            return redirect()->intended('dashboard')->withSuccess('login');
+        }
+
+        return redirect('login')->with('error', 'Login Details are not valid');
+    }
+
     public function registration(){
         return view('auth.registration');
     }
@@ -30,5 +49,18 @@ class CustomAuthController extends Controller
         ]);
 
         return redirect('registration')->with('success', 'Registration Complete');
+    }
+
+    public function dashboard(){
+        if (Auth::check()){
+            return view('dashboard');
+        }
+        return redirect('login');
+    }
+
+    public function logout(){
+        Session::flush();
+        Auth::logout();
+        return redirect('login');
     }
 }
