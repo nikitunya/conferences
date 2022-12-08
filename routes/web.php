@@ -14,11 +14,11 @@ use App\Http\Controllers\CustomAuthController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+//    return view('welcome');
+    return view('auth/registration');
 });
 
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register');
 
-Auth::routes();
+Route::post('custom-registration', [CustomAuthController::class, 'custom_registration'])->name('register.custom');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
