@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\ConferenceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +30,7 @@ Route::post('custom-login', [CustomAuthController::class, 'custom_login'])->name
 Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
 
 Route::get('logout', [CustomAuthController::class, 'logout'])->name('logout');
+
+Route::get('conference', [ConferenceController::class, 'index'])->name('conference');
+
+//Route::get('conference/fetch_all', [ConferenceController::class, 'fetch_all'])->name('conference.fetch_all');
