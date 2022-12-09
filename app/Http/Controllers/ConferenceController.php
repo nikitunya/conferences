@@ -39,7 +39,7 @@ class ConferenceController extends Controller
             'description' => 'required',
             'conference_date' => 'required|date',
             'address' => 'required',
-            'participants' => 'required'
+            'participants' => 'required|numeric'
         ]);
         $input = $request->all();
         $conference->update($input);
@@ -50,27 +50,6 @@ class ConferenceController extends Controller
         Conference::destroy($id);
         return redirect('conference')->with('success', 'Conference Successfully Deleted');
     }
-
-//    public function edit_validation(Request $request){
-//        $request->validate([
-//            'title'  => 'required',
-//            'description' => 'required',
-//            'conference_date' => 'required|date',
-//            'address' => 'required',
-//            'participants' => 'required'
-//        ]);
-//        $data = $request->all();
-//
-//        $form_data = array(
-//            'title' => $data['title'],
-//            'description' => $data['description'],
-//            'conference_date' => $data['conference_date'],
-//            'address' => $data['address'],
-//            'participants' => $data['participants']
-//        );
-//        Conference::whereId($data['hidden_id'])->update($form_data);
-//        return redirect('conference')->with('success', 'Conference Updated');
-//    }
 
     function add_validation(Request $request){
         $request->validate([

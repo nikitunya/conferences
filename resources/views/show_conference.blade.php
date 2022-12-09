@@ -2,7 +2,6 @@
 @section('content')
 
     <div class="card w-100 text-center">
-{{--        <div class="card-header ">Conference Page</div>--}}
         <h1 class="card-header">Conference</h1>
         <div class="card-body">
             <h2 class="card-title">Title : {{ $conferences->title }}</h2>

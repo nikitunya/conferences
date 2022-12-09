@@ -3,27 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\ConferenceController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::resource('conference', ConferenceController::class);
 
-//Route::get('/', function () {
-////    return view('welcome');
-//    return view('auth/registration');
-//});
 Route::get('/', function () {
-//    return view('welcome');
-    return view('conference');
+    return view('auth/login');
 });
+
+Route::resource('/conference', ConferenceController::class);
 
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register');
 

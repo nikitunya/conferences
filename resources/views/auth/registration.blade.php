@@ -37,9 +37,6 @@
                             </div>
                         </form>
                         <br />
-                        <div class="text-center">
-                            <a href="{{route('login')}}">Login</a>
-                        </div>
                     </div>
                 </div>
             </div>
