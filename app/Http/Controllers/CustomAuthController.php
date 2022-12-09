@@ -23,7 +23,7 @@ class CustomAuthController extends Controller
         $credential = $request->only('email', 'password');
 
         if (Auth::attempt($credential)){
-            return redirect()->intended('dashboard')->withSuccess('login');
+            return redirect()->intended('conference')->withSuccess('You have logged in successfully');
         }
 
         return redirect('login')->with('error', 'Login Details are not valid');

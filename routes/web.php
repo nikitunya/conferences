@@ -16,14 +16,14 @@ use App\Http\Controllers\ConferenceController;
 
 Route::resource('conference', ConferenceController::class);
 
-Route::get('/', function () {
-//    return view('welcome');
-    return view('auth/registration');
-});
 //Route::get('/', function () {
 ////    return view('welcome');
-//    return view('conference');
+//    return view('auth/registration');
 //});
+Route::get('/', function () {
+//    return view('welcome');
+    return view('conference');
+});
 
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register');
 

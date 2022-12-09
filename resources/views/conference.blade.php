@@ -5,7 +5,7 @@
         <h2 class="mt-3">Conference Management</h2>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+{{--                <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>--}}
                 <li class="breadcrumb-item active">Conference Management</li>
             </ol>
         </nav>
@@ -26,18 +26,6 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-{{--                        <table class="table table-bordered" id="conference_table">--}}
-{{--                            <thead>--}}
-{{--                            <tr>--}}
-{{--                                <th>Title</th>--}}
-{{--                                <th>Description</th>--}}
-{{--                                <th>Date</th>--}}
-{{--                                <th>Address</th>--}}
-{{--                                <th>Participants</th>--}}
-{{--                                <th>Action</th>--}}
-{{--                            </tr>--}}
-{{--                            </thead>--}}
-{{--                        </table>--}}
                         <table class="table">
                             <thead>
                                 <tr>

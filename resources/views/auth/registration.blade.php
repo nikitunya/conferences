@@ -1,7 +1,7 @@
 @extends('dashboard')
 @section('content')
 
-    <main class="signup-form">
+    <main class="signup-form w-100">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="row-md-4">

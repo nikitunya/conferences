@@ -10,6 +10,6 @@ class Conference extends Model
     use HasFactory;
 
     protected  $fillable = [
-        'title', 'description', 'conference_date', 'address', 'participants'
+            'title', 'description', 'conference_date', 'address', 'participants'
     ];
 }

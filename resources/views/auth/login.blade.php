@@ -1,6 +1,6 @@
 @extends('dashboard')
 @section('content')
-    <main class="login-form">
+    <main class="login-form w-100">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-4">
@@ -9,7 +9,6 @@
                             {{session()->get('error')}}
                         </div>
                     @endif
-                    <div class="card">
                         <h3 class="card-header text-center">Login</h3>
                         <div class="card-body">
                             <form method="post" action="{{route('login.custom')}}">
@@ -33,7 +32,6 @@
                             </form>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </main>
