@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="col col-md-6">Conference Management</div>
                         <div class="col col-md-6">
-                            <a href="/conference/add" class="btn btn-success btn-sm float-right">Add</a>
+                            <a href="{{url('/conference/create')}}" class="btn btn-success btn-lg float-right">Add New</a>
                         </div>
                     </div>
                 </div>
@@ -60,10 +60,12 @@
                                 <th>{{$item->address}}</th>
                                 <th>{{$item->participants}}</th>
                                 <td>
-                                    <a href="{{url('/conference/' . $item->id)}}" title="View Conference"><button class="btn btn-info btn-sm">View</button></a>
-                                    <a href="" title="Edit Conference"><button class="btn btn-primary btn-sm">Edit</button></a>
-                                    <form method="POST" action="" accept-charset="UTF-8" style="display:inline">
-                                        <a href="" title="Delete Conference"><button type="submit" class="btn btn-danger btn-sm" title="Delete Conference">Delete</button></a>
+                                    <a href="{{url('/conference/' . $item->id)}}" title="View Conference"><button class="btn btn-info btn-lg">View</button></a>
+                                    <a href="{{url('/conference/' . $item->id . '/edit')}}" title="Edit Conference"><button class="btn btn-primary btn-lg">Edit</button></a>
+                                    <form method="POST" action="{{url('/conference/' . $item->id)}}" accept-charset="UTF-8" style="display:inline">
+                                        {{method_field('DELETE')}}
+                                        {{csrf_field()}}
+                                        <a href="" title="Delete Conference"><button type="submit" class="btn btn-danger btn-lg" title="Delete Conference">Delete</button></a>
                                     </form>
                                 </td>
                             </tr>

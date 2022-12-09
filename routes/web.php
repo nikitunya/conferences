@@ -20,6 +20,10 @@ Route::get('/', function () {
 //    return view('welcome');
     return view('auth/registration');
 });
+//Route::get('/', function () {
+////    return view('welcome');
+//    return view('conference');
+//});
 
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register');
 
@@ -40,5 +44,7 @@ Route::get('conference/fetch_all', [ConferenceController::class, 'fetch_all'])->
 Route::get('conference/add', [ConferenceController::class, 'add'])->name('add');
 
 Route::post('conference/add_validation', [ConferenceController::class, 'add_validation'])->name('conference.add_validation');
+
+//Route::post('conference/edit_validation', [ConferenceController::class, 'edit_validation'])->name('conference.edit_validation');
 
 //Route::get('conference/id', [ConferenceController::class, 'show'])->name('show_conference');
