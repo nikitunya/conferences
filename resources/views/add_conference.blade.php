@@ -5,7 +5,7 @@
         <h2 class="mt-3">Conference Management</h2>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/conference">Conference Management</a></li>
+                <li class="breadcrumb-item"><a href="/conference">Conference</a></li>
                 <li class="breadcrumb-item active">Add New Conference</li>
             </ol>
         </nav>

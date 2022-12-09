@@ -3,10 +3,9 @@
 @section('content')
     @auth()
     <div class="w-100">
-        <h2 class="mt-3">Conference Management</h2>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active">Conference Management</li>
+                <li class="breadcrumb-item active">Conference</li>
             </ol>
         </nav>
         <div class="mt-4 mb-4">
@@ -68,10 +67,9 @@
     @endauth
     @guest()
     <div class="w-100">
-        <h2 class="mt-3">Conference Management</h2>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active">Conference Management</li>
+                <li class="breadcrumb-item active">Conference</li>
             </ol>
         </nav>
         <div class="mt-4 mb-4">
